@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    right: 0;
+    left: 0;
+    background: #fff;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+nav .logo img{
+    width: 120px;
+    position: relative;
+    left: -45px;
+    cursor: pointer;
+    margin: 5px 0;
+}
+nav ul{
+    list-style: none;
+}
+nav ul li{
+    display: inline-block;
+    margin: 0 10px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+
+}
+nav ul li a.action {
+    color: brown;
+}
+nav ul li a:hover {
+    color: blueviolet;
+}
+nav .login a {
+    color: black;
+    text-decoration: none;
+    border-radius: 20px;
+    border: 2px solid yellow;
+    padding: 7px 20px;
+    transition: 0.3s;
+}
+nav .login a:hover {
+    background-color: yellow;
+    color: orange;
+}
+/* banner */
+.banner_bg{
+    color: black;
+    margin-top:150px;
+    width: 100%;
+    height: 60vh;
+    background-image:url(menubanner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner_bg h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color:red;
+    position: relative;
+    top: 25%;
+}
+.banner_bg h1 span{
+    color: yellow;
+    margin-left: 15px;
+}
+/* menu */
+menu {
+    padding: 70px 0px;
+
+}
+
+.menu h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 40px;
+    color: black;
+}
+
+.menu h1 span {
+    color: #facc22;
+    margin-left: 15px;
+}
+
+.menu .menu_box {
+    width: 95%;
+    margin: 45px auto 0 auto;
+    display: grid;
+    grid-gap: 30px 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.menu .menu_box .menu_card {
+    /* background-image: url(menucard_url.jpg);       
+     transparent nai ho rha background     */
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+    width: 400px;
+    height: 550px;
+    text-align: center;
+    cursor: pointer;
+    padding: 20px 0;
+    border-radius: 5px;
+    border: 2px solid black;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.menu .menu_box .menu_card .menu_img {
+    width: 395px;
+    height: 300px;
+    margin-bottom: 15px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.menu .menu_box .menu_card .menu_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.menu .menu_box .menu_card .menu_text h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.menu .menu_box .menu_card .menu_text p {
+    line-height: 21px;
+    margin-bottom: 8px;
+    margin: 0 auto;
+    width: 400px;
+}
+
+.menu .menu_box .menu_card .menu_text .menu_icon {
+    color: #facc22;
+    margin: 8px 0px;
+}
+
+.menu .menu_box .menu_card .menu_text .price {
+    font-weight: bold;
+    font-size: 20px;
+    padding: 2px 0;
+    margin-left: 20px;
+}
+
+.menu .menu_box .menu_card .menu_text .price sub {
+    margin-left: 5px;
+    color: #6d6a6a;
+    font-size: 13px;
+}
+
+.menu .menu_box .menu_card .menu_text .menu_btn {
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #facc22;
+    position: relative;
+    top: 20px;
+    z-index: 5px;
+    transition: 0.3s;
+}
+
+.menu .menu_box .menu_card .menu_text .menu_btn:hover {
+    color: #fff;
+}
+
+.menu .menu_box .menu_card .menu_text .menu_btn::before {
+    /*same in banner  */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #facc22;
+    z-index: -1;
+    transition: 0.3s;
+}
+
+.menu .menu_box .menu_card .menu_text .menu_btn:hover::before {
+    /* not working  and also in banner*/
+    top: unset;
+    bottom: 0;
+    width: 100;
+}
+
+.menu .menu_box .menu_card .menu_text .menu_btn i {
+    margin-right: 8px;
+}
